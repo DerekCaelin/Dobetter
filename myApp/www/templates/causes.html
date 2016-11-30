@@ -1,0 +1,12 @@
+<ion-view title="Causes" id="causes">
+  <ion-content padding="true" class="has-header">
+    <div class="card" ng-controller="causesCtrl" ng-repeat="x in causes | filter: {type : reveal} | orderBy:random">
+    <!--<div class="card" ng-controller="causesCtrl" ng-repeat="x in causes">-->
+     <img width= 100% height=auto ng-src={{x.image}}>
+       <h2 class="name">{{ x.name }}</h2>
+       <p class="description">{{x.description}}</p>
+       <div class="button button-positive button-full" ng-click="OpenCauseURL( {{ x.url }} )">Let's Go!</div>
+    </div>
+    
+  </ion-content>
+</ion-view>
